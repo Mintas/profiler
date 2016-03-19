@@ -12,14 +12,19 @@ import java.util.List;
  */
 public class Main {
     public static void main(String[] args) {
-        String test = "C:\\Users\\SBT-Kovalev-DA\\logg.log";
-        String givenTest = "C:\\Users\\SBT-Kovalev-DA\\Downloads\\test\\testlog.log";
-        EventParser parser = new LogEventParserImpl();
-        List<Event> events = parser.parseEvents(givenTest);
-        //System.out.println(events.size());
+        if (args.length > 0) {
+            String path = args[0];
 
-        ProfileFromEventsExtractor extractor = new ProfileFromEventsExtractorImpl();
-        List<MethodProfile> methodProfiles = extractor.extractFrom(events);
-        methodProfiles.forEach(mp -> System.out.println(mp.toString()));
+            EventParser parser = new LogEventParserImpl();
+            List<Event> events = parser.parseEvents(path);
+
+            ProfileFromEventsExtractor extractor = new ProfileFromEventsExtractorImpl();
+            List<MethodProfile> methodProfiles = extractor.extractFrom(events);
+            methodProfiles.forEach(mp -> System.out.println(mp.toString()));
+
+        }
+        //String test = "C:\\Users\\SBT-Kovalev-DA\\logg.log";
+        //String givenTest = "C:\\Users\\SBT-Kovalev-DA\\Downloads\\test\\testlog.log";
+
     }
 }
