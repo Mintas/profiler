@@ -13,7 +13,6 @@ import java.util.stream.LongStream;
 
 import static java.util.stream.Collectors.groupingBy;
 import static java.util.stream.Collectors.toList;
-import static java.util.stream.Collectors.toMap;
 import static model.EventType.ENTRY;
 import static model.EventType.EXIT;
 import static model.MethodInvocation.ofEvents;

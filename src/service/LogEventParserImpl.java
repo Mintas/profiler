@@ -13,14 +13,12 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
-import static java.lang.Integer.valueOf;
-
 /**
  * Created by SBT-Kovalev-DA on 19.03.2016.
  */
 public class LogEventParserImpl implements EventParser {
     private static final String SEPARATOR = " ";
-    private final DateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss,SSS");
+    private static final DateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss,SSS");
 
     @Override
     public List<Event> parseEvents(String fileName) {

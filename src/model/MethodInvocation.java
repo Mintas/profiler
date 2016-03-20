@@ -1,7 +1,6 @@
 package model;
 
 import java.util.Date;
-import java.util.concurrent.TimeUnit;
 
 /**
  * Created by SBT-Kovalev-DA on 19.03.2016.
@@ -22,7 +21,7 @@ public class MethodInvocation {
     }
 
     private static long getDateDiff(Date start, Date end) {
-        return end.getTime() - start.getTime();//TimeUnit.MILLISECONDS.toMillis(diffInMillies);
+        return end.getTime() - start.getTime();
     }
 
 

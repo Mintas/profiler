@@ -33,5 +33,4 @@ public class Event {
     public long getInvocationId() {
         return invocationId;
     }
-
 }

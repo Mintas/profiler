@@ -23,8 +23,5 @@ public class Main {
             methodProfiles.forEach(mp -> System.out.println(mp.toString()));
 
         }
-        //String test = "C:\\Users\\SBT-Kovalev-DA\\logg.log";
-        //String givenTest = "C:\\Users\\SBT-Kovalev-DA\\Downloads\\test\\testlog.log";
-
     }
 }
